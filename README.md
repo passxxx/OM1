@@ -190,3 +190,27 @@ Please make sure to read the [Contributing Guide](./CONTRIBUTING.md) before maki
 ## License
 
 This project is licensed under the terms of the MIT License, which is a permissive free software license that allows users to freely use, modify, and distribute the software. The MIT License is a widely used and well-established license that is known for its simplicity and flexibility. By using the MIT License, this project aims to encourage collaboration, modification, and distribution of the software.
+
+## Troubleshooting
+
+### Agent runs but no robot response
+1. Check WebSim at http://localhost:8000 for visual debugging
+2. Verify your API key is correctly set (not `openmind_free`)
+3. Check logs with `--log-level DEBUG` flag:
+```bash
+   uv run src/run.py spot --log-level DEBUG
+```
+
+### "NO AVAILABLE INPUTS" error
+- Ensure camera/microphone permissions are granted
+- Verify input devices are connected
+- Check agent_inputs configuration in your config file
+
+### Port 8000 already in use
+- Kill the process using port 8000: `lsof -ti:8000 | xargs kill -9`
+- Or change the WebSim port in your configuration
+
+For more help, see:
+- [Documentation](https://docs.openmind.org/)
+- [GitHub Issues](https://github.com/OpenMind/OM1/issues)
+- [Discord Community](https://discord.gg/openmind)
