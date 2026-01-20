@@ -49,6 +49,18 @@ For Linux
 sudo apt-get update
 sudo apt-get install portaudio19-dev python-dev ffmpeg
 ```
+#### For Windows
+1. Install [Python 3.10+](https://www.python.org/downloads/)
+2. Install [Visual Studio Build Tools](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022)
+3. Install PortAudio:
+```powershell
+pip install pyaudio
+
+4. Install FFmpeg using [Chocolatey](https://chocolatey.org/):
+```powershell
+choco install ffmpeg
+
+
 
 ### Obtain an OpenMind API Key
 
